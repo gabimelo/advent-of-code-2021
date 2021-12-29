@@ -23,7 +23,7 @@ def main():
 
 
 def _get_rating(numbers_selected_by_bit_criteria, tries, operator):
-    amount_of_ones = _get_amount_of_ones(numbers_selected_by_bit_criteria, tries) 
+    amount_of_ones = _get_amount_of_ones(numbers_selected_by_bit_criteria, tries)
     to_keep = '1' if operator(amount_of_ones, (len(numbers_selected_by_bit_criteria) / 2)) else '0'
     return list(filter(None, [x if x[tries] == to_keep else None for x in numbers_selected_by_bit_criteria]))
 

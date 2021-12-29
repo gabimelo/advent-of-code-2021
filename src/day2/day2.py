@@ -11,7 +11,7 @@ def main():
 
     final_measurements = reduce(_compute_position_part_2, parsed_commands, {'aim': 0, 'depth': 0, 'horizontal': 0})
     print(f'Answer for part 2 is: {final_measurements["horizontal"] * final_measurements["depth"]}')
-    
+
 
 def _parse_commands(command):
     if 'forward' in command:
@@ -27,7 +27,8 @@ def _compute_position_part_2(acc, command):
         'aim': acc['aim'] + command[1],
         'depth': acc['depth'] + acc['aim'] * command[0],
         'horizontal': acc['horizontal'] + command[0]
-    } 
+    }
+
 
 if __name__ == '__main__':
     main()
